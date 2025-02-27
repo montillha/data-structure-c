@@ -1,0 +1,2 @@
+# TAD Ordered List
+Neste trabalho prático, o objetivo é desenvolver uma implementação da TAD Ordered List em linguagem C. A Ordered List é uma estrutura de dados que mantém seus elementos ordenados de acordo com uma relação de ordem especificada.
