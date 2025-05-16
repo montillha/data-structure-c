@@ -17,7 +17,3 @@ Este projeto simula o sistema de atendimento de um banco, com duas filas: uma pa
 - `s` → Realiza um atendimento, chamando um cliente de acordo com as regras.
 - `f` → Encerra o expediente e imprime a ordem completa de atendimento.
 
----
-
-## 📤 Saída:
-Ao encerrar (com `f`), o programa imprime, um por linha, os nomes dos clientes atendidos na ordem correta.
