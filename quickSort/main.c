@@ -20,9 +20,7 @@ int partition(int *numbers, int start, int end) {
     return i + 1;
 }
 
-void quicksort_iterative(int numbers[], int n) {
-    t_stack* stack = create(n);
-
+void quicksort_iterative(int *numbers, int n,t_stack* stack) {
     if (!stack){
         return;
     }     
@@ -82,15 +80,19 @@ int main() {
     int n;
     scanf("%d", &n);
     int numbers[n];
-    for (int i = 0; i < n; i++)
+
+    for (int i = 0; i < n; i++){
         scanf("%d", &numbers[i]);
+    }
 
-    quicksort_iterative(numbers, n);
+    t_stack* stack = create(n);
+    quicksort_iterative(numbers, n,stack);
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++){
         printf("%d ", numbers[i]);
+    }    
     printf("\n");
-
+    
     return 0;
 }
 
