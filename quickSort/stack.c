@@ -14,20 +14,20 @@ int is_empty(t_stack* stack) {
     return stack->top == -1;
 }
 
-void push(t_stack* stack, t_interval value) {
+int push(t_stack* stack, t_interval value) {
     if (stack->top == stack->max - 1) {
-        printf("Stack overflow\n");
-        exit(1);
+       return 0; 
     }
     stack->items[++stack->top] = value;
+    return 1; 
 }
 
-t_interval pop(t_stack* stack) {
+int pop(t_stack* stack, t_interval* out) {
     if (is_empty(stack)) {
-        printf("Stack underflow\n");
-        exit(1);
+       return 0; 
     }
-    return stack->items[stack->top--];
+    *out = stack->items[stack->top--];
+    return 1; 
 }
 
 void destroy(t_stack* stack) {

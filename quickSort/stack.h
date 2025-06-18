@@ -11,11 +11,10 @@ typedef struct {
     int top;
     t_interval* items;
 } t_stack;
-
-t_stack* create(int max);
-void push(t_stack* stack, t_interval value);
-t_interval pop(t_stack* stack);
-int is_empty(t_stack* stack);
-void destroy(t_stack* stack);
+t_stack* create(int);
+int push(t_stack*, t_interval);
+int pop(t_stack*,t_interval*);
+int is_empty(t_stack* );
+void destroy(t_stack*);
 
 #endif
